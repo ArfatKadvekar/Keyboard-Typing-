@@ -1,2 +1,2 @@
-# Keyboard-Typing-
-This code is about keyboard typing functioning code
+# Cool-codes
+It contains cool codes developed by Arfat Kadvekar

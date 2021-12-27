@@ -1,213 +1,112 @@
 body {
-    background-color: #131417;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .title {
-    color: mintcream;
-    text-transform: uppercase;
-    margin-top: 3em;
-    margin-bottom: 3em;
-    font-size: 1em;
-    letter-spacing: 0.3em;
-  }
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000000;
+  font-family: consolas;
+}
 
-  .footer {
-    color: mintcream;
-    text-transform: uppercase;
-    margin-top: 3em;
-    margin-bottom: 3em;
-    font-size: 1em;
-    letter-spacing: 0.3em;
-    text-align: 10px;
-  }
-  
-  .keyboard {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .row {
-    list-style: none;
-    display: flex;
-  }
-  
-  li {
-    height: 3em;
-    width: 3em;
-    color: rgba(0,0,0,0.7);
-    border-radius: 0.4em;
-    line-height: 3em;
-    letter-spacing: 1px;
-    margin: 0.4em;
-    transition: 0.3s;
-    text-align: center;
-    font-size: 1em;
-  }
-  
-  #tab {
-    width: 5em;
-  }
-  
-  #caps {
-    width: 6em;
-  }
-  
-  #left-shift {
-    width: 8em;
-  }
-  
-  #enter {
-    width: 6em;
-  }
-  
-  #right-shift {
-    width: 8em;
-  }
-  
-  #back {
-    width: 5em;
-  }
-  
-  .pinky { 
-    background-color: crimson;
-    border: 2px solid crimson;
-  }
-  .pinky.selected {
-    color: crimson;
-  }
-  
-  .ring { 
-    background-color: coral;
-    border: 2px solid coral;
-  }
-  .ring.selected {
-    color: coral;
-  }
-  
-  .middle { 
-    background-color: darkorange;
-    border: 2px solid darkorange;
-  }
-  .middle.selected {
-    color: darkorange;
-  }
-  
-  .pointer1st { 
-    background-color: gold;
-    border: 2px solid gold;
-  }
-  .pointer1st.selected {
-    color: gold;
-  }
-  
-  .pointer2nd { 
-    background-color: khaki;
-    border: 2px solid khaki;
-  }
-  .pointer2nd.selected {
-    color: khaki;
-  }
-  
-  .fill-out-key {
-    background-color: slategrey;
-    border: 2px solid slategrey;
-  }
-  
-  .selected {
-    background-color: transparent;
-        -webkit-animation: vibrate-1 0.3s linear infinite both;
-              animation: vibrate-1 0.3s linear infinite both;
-  }
-  
-  /* ----------------------------------------------
-   * Created by Arfat Kadvekar
-   * Licensed under FreeBSD License.
-   * See http://animista.net/license for more info. 
-   * w: http://animista.net, t: @cssanimista
-   * ---------------------------------------------- */
-  
-  .hit {
-      -webkit-animation: hit 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-              animation: hit 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  }
-  
-  @-webkit-keyframes hit {
-    0% {
-      -webkit-transform: scale(1.2);
-              transform: scale(1.2);
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
-  }
-  @keyframes hit {
-    0% {
-      -webkit-transform: scale(1.2);
-              transform: scale(1.2);
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
-  }
-  
-  @-webkit-keyframes vibrate-1 {
-    0% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-    20% {
-      -webkit-transform: translate(-2px, 2px);
-              transform: translate(-2px, 2px);
-    }
-    40% {
-      -webkit-transform: translate(-2px, -2px);
-              transform: translate(-2px, -2px);
-    }
-    60% {
-      -webkit-transform: translate(2px, 2px);
-              transform: translate(2px, 2px);
-    }
-    80% {
-      -webkit-transform: translate(2px, -2px);
-              transform: translate(2px, -2px);
-    }
-    100% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-  }
-  @keyframes vibrate-1 {
-    0% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-    20% {
-      -webkit-transform: translate(-2px, 2px);
-              transform: translate(-2px, 2px);
-    }
-    40% {
-      -webkit-transform: translate(-2px, -2px);
-              transform: translate(-2px, -2px);
-    }
-    60% {
-      -webkit-transform: translate(2px, 2px);
-              transform: translate(2px, 2px);
-    }
-    80% {
-      -webkit-transform: translate(2px, -2px);
-              transform: translate(2px, -2px);
-    }
-    100% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-  }
+a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #28f321;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+a:hover {
+  color: #000000;
+  background: #28f321;
+  box-shadow: 0 0 8px #00f80c, 0 0 32px #00f80c, 0 0 80px #00f80c;
+  transition-delay: 1s;
+  border-radius: 25px;
+
+}
+
+
+a span {
+  position: absolute;
+  display: block;
+}
+
+
+a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #28f321);
+}
+
+
+
+a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+
+a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #28f321);
+}
+
+a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+
+
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #28f321);
+}
+
+a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+
+
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #28f321);
+}
+
+a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+p {
+ color: white;
+ font-family: sans-serif;
+ vertical-align: text-top;
+}
+h1{
+  color: white;
+  font-family: sans-serif;
+  vertical-align: top;
+}
